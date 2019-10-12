@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About Me</title>
+    <style>
+      .list-item {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>About Me</h1>
+
+    <ul>
+      <li>Nickname: <span id="nickname"></span></li>
+      <li>Favorite food: <span id="fav-food"></span></li>
+      <li>Hometown: <span id="hometown"></span></li>
+    </ul>
+  </body>
+  <script>
+    const body = document.body;
+    body.style.fontFamily = 'Arial, sans-serif';
+
+    document.querySelector('#nickname').textContent = 'the mario';
+    document.getElementById('fav-food').textContent = 'pizza';
+    document.querySelector('#hometown').textContent = 'Torreon';
+
+    const lis = document.querySelectorAll('li');
+    for (let li of lis) {
+      li.classList.add('list-item');
+    }
+
+    const image = document.createElement('img');
+    image.setAttribute(
+      'src',
+      'https://avatars1.githubusercontent.com/u/48810045?s=400&u=d8cd54a7ae8fafae9de17f58d7bb168c90a6de48&v=4',
+    );
+
+    body.append(image);
+  </script>
+</html>
